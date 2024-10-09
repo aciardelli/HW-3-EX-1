@@ -22,3 +22,9 @@ DELETE FROM Students WHERE Name='Layal';
 SELECT employees.name, employees.Company, companies.date FROM employees Inner join companies ON employees.Company=companies.name;
 SELECT employees.name FROM employees Inner join companies ON employees.Company=companies.name and companies.Date < 2000;
 SELECT companies.name FROM companies Inner join employees ON employees.Company=companies.name and employees.Role='Graphic Designer';
+
+SELECT Name from Students where points=(SELECT MAX(points) from Students);
+SELECT AVG(points) from Students;
+SELECT COUNT(Name) from Students where points=500;
+SELECT Name from Students WHERE Name GLOB '*s*';
+SELECT Name from Students ORDER BY points DESC;
